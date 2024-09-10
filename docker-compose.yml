@@ -1,0 +1,13 @@
+services:
+  inference:
+    container_name: auto-download-market
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "9999:9999"
+    volumes:
+      - ./data:/app/data
+
+volumes:
+  data:
